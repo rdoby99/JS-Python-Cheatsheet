@@ -2,28 +2,23 @@ import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function BasicAccordion(props) {
+export default function InnerAccordion(props) {
   return (
     <div>
-      <Accordion>
+      <Accordion className='!rounded-none !shadow-none !border !border-blue-500 !border-solid'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          className='!bg-blue-300'
         >
-          <Typography>{ props.title }</Typography>
+          <code>{ props.title }</code>
         </AccordionSummary>
-        <AccordionDetails className='!px-0 !pb-0'>
-          <Typography className='!px-2 !mb-8'>
+        <AccordionDetails>
+          <code>
             { props.details }
-          </Typography>
-          <div className='flex flex-col gap-2'>
-            { props.children }
-          </div>
+          </code>
         </AccordionDetails>
       </Accordion>
     </div>

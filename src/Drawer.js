@@ -112,7 +112,7 @@ export default function PersistentDrawerLeft() {
               </IconButton>
             </DrawerHeader>
             <img className='h-20 py-2 mx-auto' src={logo} alt='Javascript Python Logo'/>
-            <Typography variant='subhead' className='!text-center pt-6 pb-2'>The Javascript Python Cheat Sheet is a resource for learning Python as a Javascript Developer</Typography>
+            <Typography variant='subhead' className='!text-center pt-6 pb-2'>The Javascript Python Cheat Sheet is a resource for learning Python syntax and methods as a Javascript developer</Typography>
             <List>
               {['Basics', 'Methods'].map((text, index) => (
                 <ListItem key={text} disablePadding>
