@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default function InnerAccordion(props) {
   return (
     <div>
-      <Accordion className='!rounded-none !shadow-none !border !border-blue-500 !border-solid'>
+      <Accordion className='!rounded-none !shadow-none !border !border-blue-500 !border-solid !border-b-0'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -16,9 +16,8 @@ export default function InnerAccordion(props) {
           <code>{ props.title }</code>
         </AccordionSummary>
         <AccordionDetails>
-          <code>
-            { props.details }
-          </code>
+          <div className='mb-4'> { props.details } </div>
+          { props.children }
         </AccordionDetails>
       </Accordion>
     </div>

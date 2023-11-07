@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function BasicAccordion(props) {
   return (
-    <div>
+    <div className='!border-b !border-blue-500 !border-solid'>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -21,7 +21,7 @@ export default function BasicAccordion(props) {
           <Typography className='!px-2 !mb-8'>
             { props.details }
           </Typography>
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col'>
             { props.children }
           </div>
         </AccordionDetails>
