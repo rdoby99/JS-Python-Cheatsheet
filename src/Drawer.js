@@ -18,6 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import logo from './jspython.png';
 import Tabs from './Tabs';
+import { TextField } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -105,7 +106,7 @@ export default function PersistentDrawerLeft() {
         open={open}
       >
         <div className='!flex !flex-col !justify-between h-full items-center'>
-          <div>
+          <div className='flex flex-col gap-2 px-2'>
             <DrawerHeader>
               <IconButton onClick={handleDrawerClose}>
                 {theme.direction === 'ltr' ? <ChevronLeftIcon color="primary" /> : <ChevronRightIcon color="primary" />}
@@ -113,6 +114,7 @@ export default function PersistentDrawerLeft() {
             </DrawerHeader>
             <img className='h-20 py-2 mx-auto' src={logo} alt='Javascript Python Logo'/>
             <Typography variant='subhead' className='!text-center pt-6 pb-2'>The Javascript Python Cheat Sheet is a resource for learning Python syntax and methods as a Javascript developer</Typography>
+            <TextField id="outlined-basic" label="Search" variant="outlined" />
             <List>
               {['Basics', 'Methods'].map((text, index) => (
                 <ListItem key={text} disablePadding>

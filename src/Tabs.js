@@ -11,7 +11,7 @@ export default function Tabs() {
         <BasicAccordion title='Printing to Console' details='Show information in your browsers console'>
           <InnerAccordion title='console.log("Hello, world!")' details='print("Hello, world!")'/>
         </BasicAccordion>
-        <BasicAccordion title='let myVar = 10' details='myVar = 10'/>
+        <BasicAccordion title='Variables' details='myVar = 10'/>
       </div>
       <div className="w-1/3 flex flex-col gap-4">
         <BasicAccordion title='Conditionals' details ='Conditionally run code'>
@@ -22,7 +22,7 @@ export default function Tabs() {
           } else {
           }</pre>'/>
         </BasicAccordion>
-        <BasicAccordion title='for (let i = 0; i < 5; i++)' details='for i in range(5):'/>
+        <BasicAccordion title='Loops' details='for i in range(5):'/>
       </div>
       <div className="w-1/3 flex flex-col gap-4">
         <BasicAccordion title='Operators' details='Arithmetic, assigment, comparison, and logical operators.'>
